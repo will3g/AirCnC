@@ -1,0 +1,31 @@
+version: '2.2'
+
+services:
+
+    backend:
+        build:
+            dockerfile: ./backend.dockerfile
+            context: ./backend
+        image: backend-aircnc
+        container_name: node-aircnc
+        ports: 
+            - "3333:3333" 
+        networks: 
+            - network-aircnc
+
+    frontend:
+        build:
+            dockerfile: ./frontend.dockerfile
+            context: ./frontend
+        image: frontend-aircnc
+        container_name: react-aircnc
+        ports: 
+            - "3000:3000" 
+        networks: 
+            - network-aircnc
+        depends_on: 
+            - "backend"
+
+networks:
+    network-aircnc:
+        driver: bridge
