@@ -26,7 +26,7 @@ button {
 }
 
 .container {
-    margin: 40px auto 0;
+    margin: 20px auto 0;
     max-width: 450px;
     width: 100%;
     display: flex;
@@ -37,7 +37,7 @@ button {
 .content {
     width: 100%;
     background: #fff;
-    margin-top: 50px;
+    margin-top: 35px;
     border-radius: 4px;
     padding: 30px;
 }
